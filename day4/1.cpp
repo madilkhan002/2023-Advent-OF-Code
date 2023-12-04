@@ -27,7 +27,7 @@ signed main()
         int count = 0;
         int total_match = 0;
         while (iss >> number) {
-            if(count < 5) winnings[number] = 1;
+            if(count < 10) winnings[number] = 1;
             else
             {
                 if(winnings.find(number) != winnings.end())
