@@ -11,7 +11,6 @@ signed main()
         cerr << "Error opening the file." << endl;
         return 1;
     }
-    // Read and print each line from the file
     string query;
     vector<vector<int>> convertors[7];
     vector<int>seeds;
