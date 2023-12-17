@@ -26,7 +26,7 @@ signed main()
     }
     const int n = grid.size(), m = grid[0].size();
     // dijkstra
-    multiset<pair<int, vector<int>>> state_saver; // cost, (i, j)
+    multiset<pair<int, vector<int>>> state_saver; // cost, (i, j, direction, steps_taken)
     state_saver.insert({0, {0, 0, -1, -1}});
     vector<vector<vector<vector<int>>>> cost(n, vector<vector<vector<int>>>(m, vector<vector<int>>(4, vector<int>(10, INF))));
 
