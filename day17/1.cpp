@@ -26,10 +26,11 @@ signed main()
     }
     const int n = grid.size(), m = grid[0].size();
     // dijkstra
-    multiset<pair<int, vector<int>>> state_saver; // cost, (i, j)
+    set<pair<int, vector<int>>> state_saver; // cost, (i, j, direction, steps_taken)
     state_saver.insert({0, {0, 0, -1, -1}});
     vector<vector<vector<vector<int>>>> cost(n, vector<vector<vector<int>>>(m, vector<vector<int>>(4, vector<int>(4, INF))));
 
+    // check i, j are valid or not
     auto isValidPosition = [&](int i, int j, int steps)
     {
         if(i >= 0 && j >= 0 && i < n && j < m && steps < 3) return 1;
